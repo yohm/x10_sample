@@ -1,0 +1,4 @@
+>>> Hello
+Hello, world
+>>> ParallelHelloWorld
+Hello, I'm Place(0)

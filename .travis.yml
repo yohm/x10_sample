@@ -1,0 +1,7 @@
+install:
+  - wget https://dl.dropboxusercontent.com/u/28267180/x10-2.5.4_linux_x86_64.tgz
+  - mkdir -p x10
+  - tar xvzf x10-2.5.4_linux_x86_64.tgz -C x10
+script:
+  - x10/bin/x10c++ -version
+

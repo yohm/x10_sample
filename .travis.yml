@@ -14,3 +14,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: yohm/x10_sample
+    tags: true

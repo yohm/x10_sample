@@ -1,5 +1,5 @@
 install:
-  - wget https://dl.dropboxusercontent.com/u/28267180/x10-2.5.4_linux_x86_64.tgz
+  - wget http://downloads.sourceforge.net/project/x10/x10/2.5.4/x10-2.5.4_linux_x86_64.tgz
   - mkdir -p x10
   - tar xvzf x10-2.5.4_linux_x86_64.tgz -C x10
 before_script:

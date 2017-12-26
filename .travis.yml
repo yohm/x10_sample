@@ -1,9 +1,16 @@
 install:
-  - wget http://downloads.sourceforge.net/project/x10/x10/2.5.4/x10-2.5.4_linux_x86_64.tgz
-  - mkdir -p x10
-  - tar xvzf x10-2.5.4_linux_x86_64.tgz -C x10
+- wget http://downloads.sourceforge.net/project/x10/x10/2.5.4/x10-2.5.4_linux_x86_64.tgz
+- mkdir -p x10
+- tar xvzf x10-2.5.4_linux_x86_64.tgz -C x10
 before_script:
-  - export PATH=$PWD/x10/bin:$PATH
+- export PATH=$PWD/x10/bin:$PATH
 script:
-  - test/build_run_test.sh
-
+- test/build_run_test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: GZQ4QzwL4Kkm7veyAf72jKFlO2UN0ICsyjwCAg+K/FQ++x09jWlMP1SM/yACOtkQD7MdXMWtTwN3xP9iD/uU3eAlyw/9hHP0PdswB5C9K4ab/mUn4kWEeaoS3HvWWyZyrK+/kzDmcnOzYEMs8Wm9/Njgvoh7CxgtblNZf+fJyCZ5qnbLVqRpK2WhmVjJnPPaM0SNLR8usPssiGnjuOMTsabgriZVbdxH1Drf3p9bUhdlKeBZ+UQdHmhISsUw16dTXemVoIEZdFCLUUOmG/dg3x/Lpum6Pnqby57aYM7z+mlX5X5JqpPQEv0DuFvv8nlLdCB+/aE710F+kLpFGeETrodoMSeAxnt8nLheCL6kdE2Bsq50aKfAaBJPjbcSGMmSRK2Gg3weWbOEBjRUM3MJPq7lhLCOCwcCdAHtPdFZQ4MRmD44SgMVIqOAZYb6U0mgUyIn51+Tz/1IMIu9a1GPX1cePSb7X9a3avXvgsBIQOXl/mhAF1Tzc8ijl5bNaS7Eseg5ovWu1Qr0NFWNHf9LpWWiCB+cBgjkuVsqtAKIQO/vUQRdAAS0HgWsTkWCY2lzVaFWOlpUjrO5VHWOfNn4l2rKJdcAeitbNanxaX5ar+xNvB2WA+09/RV+UApwwOzIzVuzXwXxNwgB4Cv/KrKZKH3laos2vY7KXn+bN/aFOuQ=
+  file: hello.out
+  skip_cleanup: true
+  on:
+    repo: yohm/x10_sample

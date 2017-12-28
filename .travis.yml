@@ -1,7 +1,7 @@
 install:
 - ./buildx10.sh
 before_script:
-- export PATH=$PWD/x10/bin:$PATH
+- export PATH=$PWD/x10/x10.dist/bin:$PATH
 script:
 - test/build_run_test.sh
 deploy:

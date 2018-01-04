@@ -4,6 +4,7 @@ X10_RELEASE=SF_RELEASE_2_6_1
 if [ ! -d "x10/x10.dist/bin" ]; then
   wget https://github.com/x10-lang/x10/archive/$X10_RELEASE.zip -O x10src.zip
   unzip x10src.zip
+  rm -rf x10  # clear the empty dir made by travis cache
   mv x10-$X10_RELEASE x10
 fi
 if [ ! -f "x10/x10.dist/bin/x10c" ]; then

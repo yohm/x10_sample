@@ -10,6 +10,6 @@ cd x10/x10.dist/
 export X10_STATIC_LIB=1
 NPROC=${NPROC:-$(getconf _NPROCESSORS_ONLN)}
 ant -Davailable.procs=$NPROC -Doptimize=true -DNO_CHECKS=true dist
-rm -f lib/*.so* stdlib/lib/*.so*
+rm -f lib/libgc.so*
 cd -
 

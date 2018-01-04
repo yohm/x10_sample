@@ -6,7 +6,7 @@ if [ ! -d "x10" ]; then
   unzip x10src.zip
   mv x10-$X10_RELEASE x10
 fi
-if [ ! -f "x10/x10.dist/bin/x10c++" ]; then
+if [ ! -f "x10/x10.dist/bin/x10c" ]; then
   cd x10/x10.dist/
   export X10_STATIC_LIB=1
   NPROC=${NPROC:-$(getconf _NPROCESSORS_ONLN)}

@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
 X10_RELEASE=SF_RELEASE_2_6_1
-if [ ! -d "x10" ]; then
+if [ ! -d "x10/x10.dist/bin" ]; then
   wget https://github.com/x10-lang/x10/archive/$X10_RELEASE.zip -O x10src.zip
   unzip x10src.zip
   mv x10-$X10_RELEASE x10

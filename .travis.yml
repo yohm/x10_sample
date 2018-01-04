@@ -6,6 +6,9 @@ before_script:
 - export PATH=$PWD/x10/x10.dist/bin:$PATH
 script:
 - test/build_run_test.sh
+cache:
+  directories:
+  - x10/x10.dist
 deploy:
   provider: releases
   api_key:

@@ -10,7 +10,7 @@ if [ ! -f "x10/x10.dist/bin/x10c" ]; then
   cd x10/x10.dist/
   export X10_STATIC_LIB=1
   NPROC=${NPROC:-$(getconf _NPROCESSORS_ONLN)}
-  ant -Davailable.procs=$NPROC -Doptimize=true -DNO_CHECKS=true dist
+  ant -Davailable.procs=$NPROC -Doptimize=true -DNO_CHECKS=true dist-cpp
   rm -f lib/libgc.so*
   cd -
 fi

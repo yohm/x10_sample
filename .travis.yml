@@ -1,3 +1,5 @@
+env:
+- NPROC=4
 install:
 - ./buildx10.sh
 before_script:
